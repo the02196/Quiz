@@ -38,7 +38,7 @@ function Main({ userName, ChangeEvent, quiz, selected, quizCnt }) {
                 onClick={() => {
                   nameChk();
                 }}
-                className="text-sm sm:text-base bg-gray-900 btn-primary hover:bg-gray-700 focus:ring-blue-400 sm:py-0 basis-full sm:basis-3/12 mt-5 sm:mt-0"
+                className="text-sm sm:text-base bg-gray-900 btn-primary hover:bg-gray-700 focus:bg-indigo-400 sm:py-0 basis-full sm:basis-3/12 mt-5 sm:mt-0"
               >
                 시작하기
               </button>
@@ -58,7 +58,7 @@ function Main({ userName, ChangeEvent, quiz, selected, quizCnt }) {
             </div>
           </div>
           <div className="w-full bg-white rounded-lg p-5 mt-5 flex justify-between flex-wrap items-center">
-            <div className="flex justify-between items-center xl:basis-4/12 basis-full ">
+            <div className="flex justify-between items-center  basis-full ">
               <button className="btn-primary text-sm sm:text-base border text-black basis-5/12 cursor-default">
                 랜덤 설정
               </button>
@@ -72,7 +72,7 @@ function Main({ userName, ChangeEvent, quiz, selected, quizCnt }) {
                 <option value="1">랜덤</option>
               </select>
             </div>
-            <div className="flex justify-between items-center xl:basis-4/12 basis-full">
+            <div className="flex justify-between items-center basis-full">
               <button className="btn-primary text-sm sm:text-base border text-black basis-5/12 my-5 cursor-default">
                 갯수 설정
               </button>
@@ -94,7 +94,7 @@ function Main({ userName, ChangeEvent, quiz, selected, quizCnt }) {
                   })}
               </select>
             </div>
-            <div className="flex justify-between items-center xl:basis-4/12 basis-full">
+            <div className="flex justify-between items-center basis-full">
               <button className="btn-primary text-sm sm:text-base border text-black basis-5/12 cursor-default">
                 문제 유형
               </button>
