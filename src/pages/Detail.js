@@ -24,7 +24,7 @@ function Detail({ quizList, userName }) {
                 </h4>
                 <div className="w-full h-5 bg-gray-50 rounded-full mb-5 relative">
                   <div
-                    className="absolute h-full bg-green-500 left-0 top-0 rounded-full transition-all duration-1000 text-white"
+                    className="absolute h-full bg-indigo-500 left-0 top-0 rounded-full transition-all duration-1000 text-white"
                     style={{ width: `${currentPer}%` }}
                   ></div>
                   <p
@@ -46,7 +46,7 @@ function Detail({ quizList, userName }) {
                 <div className="flex flex-wrap justify-between border rounded-lg bg-white mt-5">
                   <ul className="basis-full text-center">
                     <li
-                      className="border-b py-2.5 cursor-pointer hover:bg-gray-50 flex justify-between"
+                      className="border-b py-2.5 cursor-pointer hover:bg-indigo-50 flex justify-between"
                       onClick={() => {
                         setCurrent(current + 1);
                         setUserAnswer(quizList[current].view.number1);
@@ -58,7 +58,7 @@ function Detail({ quizList, userName }) {
                       </span>
                     </li>
                     <li
-                      className="border-b py-2.5 cursor-pointer hover:bg-gray-50 flex justify-between"
+                      className="border-b py-2.5 cursor-pointer hover:bg-indigo-50 flex justify-between"
                       onClick={() => {
                         setCurrent(current + 1);
                         setUserAnswer(quizList[current].view.number2);
@@ -70,7 +70,7 @@ function Detail({ quizList, userName }) {
                       </span>
                     </li>
                     <li
-                      className="border-b py-2.5 cursor-pointer hover:bg-gray-50 flex justify-between"
+                      className="border-b py-2.5 cursor-pointer hover:bg-indigo-50 flex justify-between"
                       onClick={() => {
                         setCurrent(current + 1);
                         setUserAnswer(quizList[current].view.number3);
@@ -82,7 +82,7 @@ function Detail({ quizList, userName }) {
                       </span>
                     </li>
                     <li
-                      className="py-2.5 cursor-pointer hover:bg-gray-50 flex justify-between"
+                      className="py-2.5 cursor-pointer hover:bg-indigo-50 flex justify-between"
                       onClick={() => {
                         setCurrent(current + 1);
                         setUserAnswer(quizList[current].view.number4);
@@ -117,12 +117,10 @@ function Detail({ quizList, userName }) {
                     점 입니다.
                   </p>
                   <p className="flex items-center mt-4">
-                    정답맞춤 : &nbsp;
-                    <span className="bg-orange-500 w-5 h-5 block mr-5 ml2"></span>
-                    선택한 답 : &nbsp;
+                    정답 : &nbsp;
                     <span className="bg-indigo-500 w-5 h-5 block mr-5 ml2"></span>
-                    정답맞춤 : &nbsp;
-                    <span className="bg-indigo-300 w-5 h-5 block mr-5 ml2"></span>
+                    선택한 답 : &nbsp;
+                    <span className="bg-gray-200 w-5 h-5 block mr-5 ml2"></span>
                   </p>
 
                   {quizList.map((e, i) => {
@@ -134,13 +132,14 @@ function Detail({ quizList, userName }) {
                           </p>
                           {Object.entries(e.view).map((el, index) => {
                             return (
-                              <p key={index}
+                              <p
+                                key={index}
                                 className={`font-bold mt-5 basis-[49.5%] border text-base py-4 rounded-lg ${
                                   e.answer === el[1] &&
                                   userAnswer[i] === e.answer
-                                    ? "bg-orange-500"
+                                    ? "bg-indigo-500"
                                     : e.answer === el[1]
-                                    ? "bg-indigo-300"
+                                    ? "bg-gray-200"
                                     : el[1] === userAnswer[i]
                                     ? "bg-indigo-500"
                                     : "bg-white"

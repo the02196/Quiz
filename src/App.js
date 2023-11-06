@@ -18,7 +18,6 @@ function App() {
     const dataValue = data.target.value;
 
     switch (true) {
-      //includes("값") => 해당 문자열이 있는지 체크하는 코드이다.
       case classValue.includes("name"):
         setUserName(dataValue);
         break;
